@@ -1,0 +1,116 @@
+// breakpoints
+$small-wide: 736px;
+$small-height: 785px;
+$medium-width: 800px;
+$large-width: 1190px;
+$xlarge-width: 1600px;
+
+// Media Query Mixins
+@mixin small-to-medium {
+    @media ( min-width: #{$small-wide} )
+      and ( max-width: #{$medium-width} ) {
+    @content;
+  }
+}
+@mixin small-only {
+    @media ( max-width: #{$medium-width - 1px} ) {
+    @content;
+  }
+}
+@mixin short-vp {
+    @media ( min-width: #{$small-wide} )
+      and ( max-height: #{$small-height - 1px} ) {
+    @content;
+  }
+}
+@mixin medium-down {
+  @media (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media (min-width: #{$xlarge-width}) {
+    @content;
+  }
+}
+
+// Set aspect ratio for block-level elements
+@mixin aspect( $width: 1, $height: 1, $fit: false ) {
+  position: relative;
+	@if ($fit) {
+		display: flex;
+		> img, > video, > iframe, > object {
+			object-fit: $fit;
+		}
+	}
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin button($color, $background, $border) {
+	color: $color;
+  background-color: $background;
+  border: 0;
+  border-color: $border;
+  display: block;
+  font-family: $font__default-heading-stack;
+  @include medium() {
+    display: inline-block;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: $border;
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+}
+
+// Reset style for buttons
+@mixin button--blank() {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  &:hover {
+    background: none;
+  }
+}

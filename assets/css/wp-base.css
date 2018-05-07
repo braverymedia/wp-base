@@ -1,0 +1,258 @@
+/**
+ * This will import all of our site's styles.
+ * It's messy to use WordPress' root `style.css` file with Sass
+ * so I like to keep all my partials and everything in
+ * an `assets` folder.
+ *
+ * This file will get compiled to the `assets/css` folder
+ * and then minified to `assets/css/min`. This is a lot cleaner.
+ *
+ * Each directory below contains multiple partials.
+ */
+/*! system-font.css v2.0.2 | CC0-1.0 License | github.com/jonathantneal/system-font-css */
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 300;
+  src: local(".SFNSText-LightItalic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Light Italic"), local("Ubuntu Light Italic"), local("Roboto-LightItalic"), local("DroidSans"), local("Tahoma"); }
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma"); }
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 400;
+  src: local(".SFNSText-Italic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Italic"), local("Ubuntu Italic"), local("Roboto-Italic"), local("DroidSans"), local("Tahoma"); }
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 500;
+  src: local(".SFNSText-Medium"), local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold"), local("Ubuntu Medium"), local("Roboto-Medium"), local("DroidSans-Bold"), local("Tahoma Bold"); }
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 500;
+  src: local(".SFNSText-MediumItalic"), local(".HelveticaNeueDeskInterface-MediumItalicP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold Italic"), local("Ubuntu Medium Italic"), local("Roboto-MediumItalic"), local("DroidSans-Bold"), local("Tahoma Bold"); }
+
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 700;
+  src: local(".SFNSText-Bold"), local(".HelveticaNeueDeskInterface-Bold"), local(".LucidaGrandeUI"), local("Segoe UI Bold"), local("Ubuntu Bold"), local("Roboto-Bold"), local("DroidSans-Bold"), local("Tahoma Bold"); }
+
+@font-face {
+  font-family: system-ui;
+  font-style: italic;
+  font-weight: 700;
+  src: local(".SFNSText-BoldItalic"), local(".HelveticaNeueDeskInterface-BoldItalic"), local(".LucidaGrandeUI"), local("Segoe UI Bold Italic"), local("Ubuntu Bold Italic"), local("Roboto-BoldItalic"), local("DroidSans-Bold"), local("Tahoma Bold"); }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+body {
+  font-size: 1.25em;
+  font-size: 1em;
+  line-height: 1.667;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    body {
+      font-size: calc( 1em + 0 * ( ( 100vw - 400px) / 500 )); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    body {
+      font-size: calc( 1em + 0.16 * ( ( 100vw - 900px) / 300 )); } }
+  @media (min-width: 1200px) {
+    body {
+      font-size: 1.16em; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: system-ui;
+  font-weight: 700;
+  line-height: 1.3; }
+
+h1 {
+  font-size: 1.728em; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h1 {
+      font-size: calc( 1.728em + 0.469 * ( ( 100vw - 400px) / 500 )); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h1 {
+      font-size: calc( 2.197em + 0.068625 * ( ( 100vw - 900px) / 300 )); } }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 2.265625em; } }
+
+h2 {
+  font-size: 1.953125em;
+  font-size: 1.44em;
+  margin-bottom: .23em; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h2 {
+      font-size: calc( 1.44em + 0.25 * ( ( 100vw - 400px) / 500 )); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h2 {
+      font-size: calc( 1.69em + 0.1225 * ( ( 100vw - 900px) / 300 )); } }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 1.8125em; } }
+
+h3 {
+  font-size: 1.5625em;
+  font-size: 1.2em;
+  margin-bottom: .35em; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h3 {
+      font-size: calc( 1.2em + 0.1 * ( ( 100vw - 400px) / 500 )); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h3 {
+      font-size: calc( 1.3em + 0.15 * ( ( 100vw - 900px) / 300 )); } }
+  @media (min-width: 1200px) {
+    h3 {
+      font-size: 1.45em; } }
+
+h4 {
+  font-size: 1.5625em;
+  font-size: 1em; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h4 {
+      font-size: calc( 1em + 0 * ( ( 100vw - 400px) / 500 )); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h4 {
+      font-size: calc( 1em + 0.16 * ( ( 100vw - 900px) / 300 )); } }
+  @media (min-width: 1200px) {
+    h4 {
+      font-size: 1.16em; } }
+
+h5 {
+  font-size: 1.25em;
+  font-size: 1em; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h5 {
+      font-size: calc( 1em + 0 * ( ( 100vw - 400px) / 500 )); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h5 {
+      font-size: calc( 1em + 0.16 * ( ( 100vw - 900px) / 300 )); } }
+  @media (min-width: 1200px) {
+    h5 {
+      font-size: 1.16em; } }
+
+h6 {
+  font-size: 1em;
+  font-size: 0.8333333333em; }
+  @media (min-width: 400px) and (max-width: 900px) {
+    h6 {
+      font-size: calc( 0.8333333333em + -0.0641025641 * ( ( 100vw - 400px) / 500 )); } }
+  @media (min-width: 900px) and (max-width: 1200px) {
+    h6 {
+      font-size: calc( 0.7692307692em + 0.1587692308 * ( ( 100vw - 900px) / 300 )); } }
+  @media (min-width: 1200px) {
+    h6 {
+      font-size: 0.928em; } }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+@media (max-width: 799px) {
+  .admin-bar .menu-toggle, .admin-bar .site-menu-group {
+    margin-top: 46px; } }
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; }
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s; }
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: .75s;
+          animation-duration: .75s; }
+
+/* If we're using Woocommerce, uncomment the next line */

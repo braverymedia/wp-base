@@ -1,0 +1,7 @@
+.admin-bar {
+  @include small-only {
+    .menu-toggle, .site-menu-group {
+      margin-top: 46px;
+    }
+  }
+}

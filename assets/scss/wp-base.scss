@@ -1,0 +1,22 @@
+/**
+ * This will import all of our site's styles.
+ * It's messy to use WordPress' root `style.css` file with Sass
+ * so I like to keep all my partials and everything in
+ * an `assets` folder.
+ *
+ * This file will get compiled to the `assets/css` folder
+ * and then minified to `assets/css/min`. This is a lot cleaner.
+ *
+ * Each directory below contains multiple partials.
+ */
+
+ // Import our partials
+ @import
+  '_config/config',
+  '_utility/utility',
+  'elements/elements',
+  'components/components',
+  'layouts/layouts';
+
+/* If we're using Woocommerce, uncomment the next line */
+// @import 'woocommerce/woocommerce';
