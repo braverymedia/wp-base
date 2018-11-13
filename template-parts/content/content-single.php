@@ -1,29 +1,43 @@
 <?php
 /**
- * @package brvry
+ * Template part for displaying posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage brvry
+ * @since 1.0.0
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php brvry_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<?php get_template_part( 'template-parts/components/entry', 'header' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( '&hellip;<span class="screen-reader-text"> "%s"</span>', 'brvry' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
+
+		wp_link_pages(
+			array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'brvry' ),
 				'after'  => '</div>',
-			) );
+			)
+		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php brvry_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
