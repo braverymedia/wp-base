@@ -20,13 +20,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'brvry' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with different keywords.', 'brvry' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'brvry' ); ?></p>
-			<?php get_search_form(); ?>
+			<p><?php _e( 'Oops!, We can&rsquo;t seem to find what you&rsquo;re looking for.', 'brvry' ); ?></p>
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
