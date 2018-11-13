@@ -38,6 +38,4 @@
 			</div>
 		<?php endif; ?>
 	</header><!-- #masthead -->
-	<section id="page" class="site">
-
-		<div id="content" class="site-content">
+	<div id="content" class="site-content">
