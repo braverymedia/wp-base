@@ -13,3 +13,16 @@ $font__default-heading-stack:  $font__system;
 // Weights
 $weight__regular: 400;
 $weight__bold: 700;
+
+// Columns
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);

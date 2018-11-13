@@ -19,3 +19,8 @@ input[type="submit"] {
 		// border-color: $color__border-button-focus;
 	}
 }
+.button {
+	&--blank {
+		@include button-blank();
+	}
+}
