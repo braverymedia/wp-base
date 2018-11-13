@@ -43,11 +43,12 @@ if ( ! function_exists( 'brvry_setup' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 980, 1200 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'site-menu' => esc_html__( 'Site Menu', 'brvry' ),
-			'social-links' => esc_html__( 'Social Links', 'brvry' ),
+			'social-links' => esc_html__( 'Social Links Menu', 'brvry' ),
 			'footer-menu' => esc_html__( 'Footer Menu', 'brvry' )
 		) );
 
@@ -84,6 +85,36 @@ if ( ! function_exists( 'brvry_setup' ) ) :
 			'flex-height' => true,
 		) );
 
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Add support for full and wide align images.
+		add_theme_support( 'align-wide' );
+
+		// Add support for editor styles.
+		add_theme_support( 'editor-styles' );
+
+		// Enqueue editor styles.
+		// add_editor_style( 'assets/css/editor.css' );
+
+		// Editor color palette.
+		add_theme_support(
+			'editor-color-palette',
+			array(
+				array(
+					'name'  => __( 'Primary Color', 'brvry' ),
+					'slug'  => 'primary',
+					'color' => brvry_hsl_hex( 'default' === get_theme_mod( 'colorscheme' ) ? 199 : get_theme_mod( 'colorscheme_primary_hue', 199 ), 100, 33 ),
+				),
+			)
+		);
+
+		// Add support for responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
+
 		// Excerpt support needed for navigation descriptions
 		add_post_type_support( 'page', 'excerpt' );
 
@@ -113,8 +144,6 @@ if ( ! function_exists( 'brvry_register_image_sizes' ) ) :
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	function brvry_register_image_sizes() {
-		add_theme_support( 'post-thumbnails' );
-		// set_post_thumbnail_size( 980, 1200 );
 		// Bubble images
 		// add_image_size( 'brvry-square', 1000, 1000, true );
 		// Heroes
@@ -158,7 +187,7 @@ function brvry_scripts() {
 
 	wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/assets/js/modernizr.min.js', false, '3.6', false);
 	wp_enqueue_script('jquery');
-	// wp_enqueue_script( 'brvry-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'brvry-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	// wp_enqueue_style( 'brvry-webfonts', $font_url, array(), null, 'screen' );
 
 	// See if we're on dev or not
@@ -178,19 +207,75 @@ function brvry_scripts() {
 add_action( 'wp_enqueue_scripts', 'brvry_scripts' );
 
 /**
+ * Enqueue supplemental block editor styles.
+ */
+function brvry_editor_customizer_styles() {
+
+	wp_enqueue_style( 'brvry-editor-customizer-styles', get_theme_file_uri( '/assets/css/style-editor-customizer.css' ), false, '1.0', 'all' );
+
+	if ( 'custom' === get_theme_mod( 'colorscheme' ) ) {
+		// Include color patterns
+		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+		wp_add_inline_style( 'brvry-editor-customizer-styles', brvry_custom_colors_css() );
+	}
+}
+add_action( 'enqueue_block_editor_assets', 'brvry_editor_customizer_styles' );
+
+/**
+ * Display custom color CSS in customizer and on frontend.
+ */
+function brvry_colors_css_wrap() {
+
+	// Only include custom colors in customizer or frontend.
+	if ( ( ! is_customize_preview() && 'default' === get_theme_mod( 'colorscheme', 'default' ) ) || is_admin() ) {
+		return;
+	}
+
+	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+
+	if ( 'default' === get_theme_mod( 'colorscheme', 'default' ) ) {
+		$primary_color = 199;
+	} else {
+		$primary_color = absint( get_theme_mod( 'colorscheme_primary_hue', 199 ) );
+	}
+	?>
+
+	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-hue="' . $primary_color . '"' : ''; ?>>
+		<?php echo brvry_custom_colors_css(); ?>
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'brvry_colors_css_wrap' );
+
+/**
+ * SVG Icons class.
+ */
+require get_template_directory() . '/classes/class-brvry-svg-icons.php';
+
+/**
+ * Custom Comment Walker template.
+ */
+require get_template_directory() . '/classes/class-brvry-walker-comment.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * SVG Icons related functions.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
