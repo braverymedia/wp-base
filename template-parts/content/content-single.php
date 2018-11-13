@@ -21,7 +21,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( '&hellip;<span class="screen-reader-text"> "%s"</span>', 'brvry' ),
+					__( 'Continue reading &hellip; <span class="screen-reader-text"> "%s"</span>', 'brvry' ),
 					array(
 						'span' => array(
 							'class' => array(),

@@ -12,11 +12,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php twentynineteen_post_thumbnail(); ?>
+	<?php brvry_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'twentynineteen' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'brvry' ) );
 		}
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -31,8 +31,8 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( ' %s <span class="meta-nav">&hellip;</span>', 'brvry' ),
-				the_title( '<span class="screen-reader-text">Continue reading "', '"</span>', false )
+				__( 'Continue reading %s<span class="meta-nav">&hellip;</span>', 'brvry' ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
 	</div><!-- .entry-content -->
