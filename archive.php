@@ -1,48 +1,55 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying archive pages
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package brvry
+ * @package WordPress
+ * @subpackage brvry
+ * @since 1.0.0
  */
 
-get_header(); ?>
+get_header();
+?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description subhead">', '</div>' );
+					the_archive_description( '<div class="page-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			// Start the Loop.
+			while ( have_posts() ) :
+				the_post();
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_type() );
-				?>
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content/content', 'excerpt' );
 
-			<?php endwhile; ?>
+				// End the loop.
+			endwhile;
 
-			<?php the_posts_navigation(); ?>
+			// Previous/next page navigation.
+			brvry_the_posts_navigation();
 
-		<?php else : ?>
+			// If no content, include the "No posts found" template.
+		else :
+			get_template_part( 'template-parts/content/content', 'none' );
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
+		endif;
+		?>
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</section><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php
+get_footer();
