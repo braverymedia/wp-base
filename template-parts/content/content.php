@@ -31,20 +31,9 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'brvry' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'brvry' ),
-				'after'  => '</div>',
+				__( ' %s <span class="meta-nav">&hellip;</span>', 'brvry' ),
+				the_title( '<span class="screen-reader-text">Continue reading "', '"</span>', false )
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php brvry_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
