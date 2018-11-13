@@ -46,9 +46,9 @@ if ( ! function_exists( 'brvry_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'site-menu' => __( 'Site Menu', 'brvry' ),
-			'social-links' => __( 'Social Links', 'brvry' ),
-			'footer-menu' => __( 'Footer Menu', 'brvry' )
+			'site-menu' => esc_html__( 'Site Menu', 'brvry' ),
+			'social-links' => esc_html__( 'Social Links', 'brvry' ),
+			'footer-menu' => esc_html__( 'Footer Menu', 'brvry' )
 		) );
 
 		/*
@@ -102,7 +102,7 @@ function brvry_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 680 );
 }
 add_action( 'after_setup_theme', 'brvry_content_width', 0 );
 
@@ -114,7 +114,7 @@ if ( ! function_exists( 'brvry_register_image_sizes' ) ) :
 	 */
 	function brvry_register_image_sizes() {
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 980, 1200 );
+		// set_post_thumbnail_size( 980, 1200 );
 		// Bubble images
 		// add_image_size( 'brvry-square', 1000, 1000, true );
 		// Heroes
@@ -134,8 +134,8 @@ function brvry_widgets_init() {
 		'name'          => esc_html__( 'Widgets', 'brvry' ),
 		'id'            => 'widget-area-1',
 		'description'   => esc_html__( 'Add widgets here.', 'brvry' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
@@ -163,13 +163,13 @@ function brvry_scripts() {
 	// See if we're on dev or not
 	if ( SCRIPT_DEBUG || WP_DEBUG ) :
 
-		wp_enqueue_style( 'brvry-style', get_template_directory_uri() . '/css/style.css', false, time(), 'all' );
-		wp_enqueue_script( 'brvry-script', get_template_directory_uri() . '/js/global.js', array(), time() );
+		wp_enqueue_style( 'brvry-style', get_template_directory_uri() . '/assets/css/wp-base.css', false, time(), 'all' );
+		wp_enqueue_script( 'brvry-script', get_template_directory_uri() . '/assets/js/global.js', array(), time() );
 
 	else :
 
-		wp_enqueue_style( 'brvry-style', get_template_directory_uri() . '/css/style.css', false, $theme_version, 'all' );
-		wp_enqueue_script( 'brvry-script', get_template_directory_uri() . '/js/min/global.min.js', array(), $theme_version, true );
+		wp_enqueue_style( 'brvry-style', get_template_directory_uri() . '/assets/css/wp-base.css', false, $theme_version, 'all' );
+		wp_enqueue_script( 'brvry-script', get_template_directory_uri() . '/assets/js/min/global.min.js', array(), $theme_version, true );
 
 	endif;
 
