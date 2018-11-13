@@ -1,9 +1,9 @@
 // _mixins.scss
 $breakpoints: (
-  small: 767px;
-  medium: 992px;
-  large: 1190px;
-  xlarge: 1600px;
+  small: 767px,
+  medium: 992px,
+  large: 1190px,
+  xlarge: 1600px
 );
 
 @mixin mq($breakpoint) {

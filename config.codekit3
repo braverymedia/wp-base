@@ -1962,6 +1962,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/assets\/css\/wp-base.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/assets\/css\/wp-base.css.map",
+		"oF": 0
+		},
 	"\/assets\/img\/bravery-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1982,12 +1989,22 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/js\/customizer.js": {
+	"\/assets\/js\/customize-preview.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/assets\/js\/min\/customizer.min.js",
+		"oAP": "\/assets\/js\/min\/customize-preview.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/customizer-controls.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/customizer-controls.min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2058,6 +2075,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/skip-link-focus-fix.min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/touch-keyboard-navigation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/touch-keyboard-navigation.min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2978,6 +3005,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/scss\/_utility\/_infinite-scroll.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/css\/_infinite-scroll.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/scss\/_utility\/_utility.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -3000,6 +3040,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/assets\/scss\/css\/_wp-admin.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/scss\/blocks\/_blocks.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/css\/_blocks.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -3030,6 +3083,32 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/scss\/components\/_media.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/css\/_media.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/scss\/elements\/_buttons.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/css\/_buttons.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/assets\/scss\/elements\/_elements.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -3039,6 +3118,45 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/assets\/scss\/css\/_elements.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/scss\/elements\/_fields.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/css\/_fields.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/scss\/elements\/_lists.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/css\/_lists.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/assets\/scss\/elements\/_tables.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/css\/_tables.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -3168,6 +3286,20 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/classes\/class-brvry-svg-icons.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/classes\/class-brvry-svg-icons.php",
+		"oF": 0
+		},
+	"\/classes\/class-brvry-walker-comment.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/classes\/class-brvry-walker-comment.php",
+		"oF": 0
+		},
 	"\/comments.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3196,6 +3328,13 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
+	"\/inc\/color-patterns.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/inc\/color-patterns.php",
+		"oF": 0
+		},
 	"\/inc\/custom-header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3215,6 +3354,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/extras.php",
+		"oF": 0
+		},
+	"\/inc\/icon-functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/inc\/icon-functions.php",
 		"oF": 0
 		},
 	"\/inc\/jetpack.php": {
@@ -3357,39 +3503,67 @@
 		"oF": 1,
 		"oS": 3
 		},
-	"\/template-parts\/content-none.php": {
+	"\/template-parts\/components\/entry-header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/content-none.php",
+		"oAP": "\/template-parts\/components\/entry-header.php",
 		"oF": 0
 		},
-	"\/template-parts\/content-page.php": {
+	"\/template-parts\/components\/entry-meta.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/content-page.php",
+		"oAP": "\/template-parts\/components\/entry-meta.php",
 		"oF": 0
 		},
-	"\/template-parts\/content-search.php": {
+	"\/template-parts\/components\/site-branding.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/content-search.php",
+		"oAP": "\/template-parts\/components\/site-branding.php",
 		"oF": 0
 		},
-	"\/template-parts\/content-single.php": {
+	"\/template-parts\/components\/site-nav.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/content-single.php",
+		"oAP": "\/template-parts\/components\/site-nav.php",
 		"oF": 0
 		},
-	"\/template-parts\/content.php": {
+	"\/template-parts\/content\/content-excerpt.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/template-parts\/content.php",
+		"oAP": "\/template-parts\/content\/content-excerpt.php",
+		"oF": 0
+		},
+	"\/template-parts\/content\/content-none.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content\/content-none.php",
+		"oF": 0
+		},
+	"\/template-parts\/content\/content-page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content\/content-page.php",
+		"oF": 0
+		},
+	"\/template-parts\/content\/content-single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content\/content-single.php",
+		"oF": 0
+		},
+	"\/template-parts\/content\/content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content\/content.php",
 		"oF": 0
 		}
 	},
