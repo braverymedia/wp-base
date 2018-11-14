@@ -1,38 +1,45 @@
 <?php
 /**
- * The header for our theme.
+ * The header for our theme
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @package brvry
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage brvry
+ * @since 1.0.0
  */
-?><!DOCTYPE html>
+?><!doctype html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
-
 		<?php wp_head(); ?>
 	</head>
 
 <body <?php body_class(); ?>>
-	<header id="masthead" class="site-header primary" role="banner">
-		<div class="site-branding">
-			<?php if ( is_front_page() ) { ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php } else { ?>
-				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-			<?php } ?>
-				<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-		</div><!-- .site-branding -->
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'brvry' ); ?></a>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Site Menu', 'brvry' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'site-menu', 'container' => 'nav', ) ); ?>
-		</nav><!-- #site-navigation -->
+	<header id="masthead" class="primary<?php echo is_singular() && brvry_can_show_post_thumbnail() ? ' site-header featured-image' : ' site-header'; ?>">
+		<?php
+			/**
+			 * Include logo and branding, then site navigation
+			**/
+			get_template_part('template-parts/components/site', 'branding');
+			get_template_part('template-parts/components/site', 'nav');
+		?>
+
+		<?php
+			/**
+			 *  Image or blank for page header.
+			 **/
+			if ( is_singular() && brvry_can_show_post_thumbnail() && has_post_thumbnail() ) : ?>
+			<div class="page-cover-image">
+				<?php brvry_post_thumbnail(); ?>
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			</div>
+		<?php endif; ?>
 	</header><!-- #masthead -->
-	<section id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'brvry' ); ?></a>
-
-		<div id="content" class="site-content">
+	<div id="content" class="site-content">

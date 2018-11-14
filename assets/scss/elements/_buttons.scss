@@ -1,0 +1,26 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	// border-color: $color__border-button;
+	// background: $color__background-button;
+	color: rgba($black, .8);
+	font-size: ms(0);
+	line-height: 1;
+	padding: .6em 1em .4em;
+
+	&:hover {
+		// border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		// border-color: $color__border-button-focus;
+	}
+}
+.button {
+	&--blank {
+		@include button-blank();
+	}
+}
