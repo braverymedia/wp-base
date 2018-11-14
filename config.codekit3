@@ -16,20 +16,6 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
-	"\/404.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/404.php",
-		"oF": 0
-		},
-	"\/archive.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/archive.php",
-		"oF": 0
-		},
 	"\/assets\/bower_components\/animate.css\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
@@ -1952,16 +1938,6 @@
 		"oAP": "\/assets\/css\/bravery-login.css.map",
 		"oF": 0
 		},
-	"\/assets\/css\/wp-base.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/assets\/css\/min\/wp-base.min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/assets\/css\/wp-base.css.map": {
 		"cB": 0,
 		"ft": 8192,
@@ -2927,32 +2903,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/scss\/_config\/_global-variables.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/css\/_global-variables.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/assets\/scss\/_config\/_mixins.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/css\/_mixins.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/assets\/scss\/_config\/_reset.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -2979,19 +2929,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/scss\/_utility\/_accessibility.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/css\/_accessibility.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/assets\/scss\/_utility\/_animations.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -3014,32 +2951,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/assets\/scss\/css\/_infinite-scroll.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/assets\/scss\/_utility\/_utility.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/css\/_utility.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/assets\/scss\/_utility\/_wp-admin.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/css\/_wp-admin.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -3105,19 +3016,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/assets\/scss\/css\/_buttons.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
-	"\/assets\/scss\/elements\/_elements.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/css\/_elements.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -3265,19 +3163,6 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/assets\/scss\/wp-base.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 0,
-		"oAP": "\/assets\/css\/wp-base.css",
-		"oF": 0,
-		"oS": 3,
-		"uL": 1
-		},
 	"\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -3307,27 +3192,6 @@
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
-	"\/footer.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/footer.php",
-		"oF": 0
-		},
-	"\/functions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/functions.php",
-		"oF": 0
-		},
-	"\/header.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/header.php",
-		"oF": 0
-		},
 	"\/inc\/color-patterns.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3340,13 +3204,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/custom-header.php",
-		"oF": 0
-		},
-	"\/inc\/customizer.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/customizer.php",
 		"oF": 0
 		},
 	"\/inc\/extras.php": {
@@ -3370,20 +3227,6 @@
 		"oAP": "\/inc\/jetpack.php",
 		"oF": 0
 		},
-	"\/inc\/template-functions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/template-functions.php",
-		"oF": 0
-		},
-	"\/inc\/template-tags.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/template-tags.php",
-		"oF": 0
-		},
 	"\/inc\/woocommerce.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3396,13 +3239,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/wpcom.php",
-		"oF": 0
-		},
-	"\/index.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/index.php",
 		"oF": 0
 		},
 	"\/languages\/brvry.pot": {
@@ -3472,36 +3308,12 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/search.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/search.php",
-		"oF": 0
-		},
 	"\/sidebar.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/sidebar.php",
 		"oF": 0
-		},
-	"\/single.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/single.php",
-		"oF": 0
-		},
-	"\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/min\/style.min.css",
-		"oF": 1,
-		"oS": 3
 		},
 	"\/template-parts\/components\/entry-header.php": {
 		"cB": 0,
