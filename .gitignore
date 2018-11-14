@@ -19,6 +19,7 @@ css/base.css
 js/core.min.js
 js/plugins.min.js
 config.codekit
+config.codekit3
 
 # Bower
 assets/bower_components
